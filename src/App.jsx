@@ -4,11 +4,11 @@ import "./App.css"
 import NavBar from './components/NavBar'
 import Shop from './pages/shop/Shop'
 import Cart from './pages/cart/Cart'
-import { ShopContext } from './context/shop-context'
+import { ShopContextProvider } from './context/shop-context'
 const App = () => {
   return (
     <div className='App'>
-      <ShopContext.Provider>
+      <ShopContextProvider>
       <Router>
         <NavBar/>
         <Routes>
@@ -16,7 +16,7 @@ const App = () => {
           <Route path='/cart' element={<Cart/>}/>
         </Routes>
       </Router>
-      </ShopContext.Provider>
+      </ShopContextProvider>
     </div>
   )
 }
